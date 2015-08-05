@@ -18,16 +18,16 @@ using System.Threading;
 
 
 
-namespace MonoForm
+namespace NetIPConfig
 {
-    public partial class NetIPConfig : Form
+    public partial class MainForm : Form
     {
         [DllImport("libc")]
         static extern int uname(IntPtr buf);
 
         private Platform CurrentPlatform;
 
-        public NetIPConfig()
+        public MainForm()
         {
             InitializeComponent();
             GetPlatform();
@@ -180,16 +180,17 @@ namespace MonoForm
 
         private Image LoadImage(Platform PlatformImage)
         {
-            Image img = MonoForm.Properties.Resources.Windows;
-            switch (PlatformImage)
-            {
-                case Platform.Linux:
-                    img = MonoForm.Properties.Resources.Linux;
-                    break;
-                case Platform.MacOSX:
-                    img = MonoForm.Properties.Resources.MacOSX;
-                    break;
-            }
+            Image img = null;
+            //MainForm.Properties.Resources.Windows;
+            //switch (PlatformImage)
+            //{
+            //    case Platform.Linux:
+            //        img = MainForm.Properties.Resources.Linux;
+            //        break;
+            //    case Platform.MacOSX:
+            //        img = MainForm.Properties.Resources.MacOSX;
+            //        break;
+            //}
 
             if (CurrentPlatform != PlatformImage)
             {
