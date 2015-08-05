@@ -7,7 +7,7 @@
     <ProjectGuid>{9C133FCB-F856-4FA6-9EE8-08445B37682C}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>NetIPConfig</RootNamespace>
+    <RootNamespace>ZebraPuma.NetIPConfig</RootNamespace>
     <AssemblyName>NetIPConfig</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

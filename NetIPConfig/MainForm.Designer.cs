@@ -1,4 +1,4 @@
-﻿namespace NetIPConfig
+﻿namespace ZebraPuma.NetIPConfig
 {
     partial class MainForm
     {
@@ -211,7 +211,7 @@
             this.panel1.Size = new System.Drawing.Size(599, 354);
             this.panel1.TabIndex = 0;
             // 
-            // Form1
+            // MainForm
             // 
             this.AcceptButton = this.btRefresh;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -220,9 +220,8 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.gIPInfo);
             this.MinimumSize = new System.Drawing.Size(640, 480);
-            this.Name = "Form1";
+            this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "SkypeBox";
             this.gIPInfo.ResumeLayout(false);
             this.gIPInfo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbWindows)).EndInit();

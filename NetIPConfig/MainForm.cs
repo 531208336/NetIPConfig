@@ -18,7 +18,7 @@ using System.Threading;
 
 
 
-namespace NetIPConfig
+namespace ZebraPuma.NetIPConfig
 {
     public partial class MainForm : Form
     {
@@ -93,7 +93,7 @@ namespace NetIPConfig
 
                 String HostName = Dns.GetHostName();
                 HostName = HostName.Split('.')[0].ToUpper();
-                Text = string.Format("Default Network IP Config : {0}", HostName);
+                Text = string.Format("Net IP Config : {0}", HostName);
 
 
             switch (Environment.OSVersion.Platform)

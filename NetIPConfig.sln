@@ -10,7 +10,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		ScreenShots\NetIPConfig-Windows.PNG = ScreenShots\NetIPConfig-Windows.PNG
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetIPConfig", "NetIPConfig\NetIPConfig.csproj", "{9C133FCB-F856-4FA6-9EE8-08445B37682C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZebraPuma.NetIPConfig.Exe", "NetIPConfig\ZebraPuma.NetIPConfig.Exe.csproj", "{9C133FCB-F856-4FA6-9EE8-08445B37682C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
