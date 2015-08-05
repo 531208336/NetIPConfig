@@ -1,6 +1,6 @@
 ﻿namespace MonoForm
 {
-    partial class Form1
+    partial class NetIPConfig
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NetIPConfig));
             this.txtInfo = new System.Windows.Forms.TextBox();
             this.lblIP = new System.Windows.Forms.Label();
             this.lblSubNet = new System.Windows.Forms.Label();

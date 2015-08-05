@@ -20,14 +20,14 @@ using System.Threading;
 
 namespace MonoForm
 {
-    public partial class Form1 : Form
+    public partial class NetIPConfig : Form
     {
         [DllImport("libc")]
         static extern int uname(IntPtr buf);
 
         private Platform CurrentPlatform;
 
-        public Form1()
+        public NetIPConfig()
         {
             InitializeComponent();
             GetPlatform();
