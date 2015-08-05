@@ -38,6 +38,8 @@ namespace ZebraPuma.NetIPConfig
 
         private void GetIpInfo()
         {
+            // Get Ip Info from OS Command
+
             String Command = "";
             String Arguments = "";
             String Pattern = "";
