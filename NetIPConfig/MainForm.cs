@@ -180,17 +180,17 @@ namespace NetIPConfig
 
         private Image LoadImage(Platform PlatformImage)
         {
-            Image img = null;
-            //MainForm.Properties.Resources.Windows;
-            //switch (PlatformImage)
-            //{
-            //    case Platform.Linux:
-            //        img = MainForm.Properties.Resources.Linux;
-            //        break;
-            //    case Platform.MacOSX:
-            //        img = MainForm.Properties.Resources.MacOSX;
-            //        break;
-            //}
+
+            Image img = Properties.Resources.Windows;
+            switch (PlatformImage)
+            {
+                case Platform.Linux:
+                    img = Properties.Resources.Linux;
+                    break;
+                case Platform.MacOSX:
+                    img = Properties.Resources.MacOSX;
+                    break;
+            }
 
             if (CurrentPlatform != PlatformImage)
             {
