@@ -40,11 +40,11 @@ namespace ZebraPuma.NetIPConfig
         private void GetIpInfo()
         {
             GetIPInfoFromOS();
-            GetIPInfoFromFrameWork();
         }
 
         private void GetIPInfoFromFrameWork()
         {
+            // Cannot rely on this method because of some classes are not implemented in Mono like : IPv4Mask
             Boolean IsNetworkAvailable = NetworkInterface.GetIsNetworkAvailable();
             if (IsNetworkAvailable)
             {
@@ -54,13 +54,6 @@ namespace ZebraPuma.NetIPConfig
                 var Ip = UnicastAddress.Address.ToString();
                 var Sub = UnicastAddress.IPv4Mask.ToString();
                 var Gw = IPProp.GatewayAddresses.FirstOrDefault().Address.ToString();
-
-
-
-
-
-
-                Debugger.Break();
             }
 
 
