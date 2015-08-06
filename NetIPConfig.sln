@@ -10,7 +10,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		ScreenShots\NetIPConfig-Windows.PNG = ScreenShots\NetIPConfig-Windows.PNG
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZebraPuma.NetIPConfig.Exe", "ZebraPuma.NetIPConfig.Exe\ZebraPuma.NetIPConfig.Exe.csproj", "{9C133FCB-F856-4FA6-9EE8-08445B37682C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZebraPuma.NetIPConfig", "ZebraPuma.NetIPConfig.Exe\ZebraPuma.NetIPConfig.csproj", "{9C133FCB-F856-4FA6-9EE8-08445B37682C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZebraPuma.Tools", "ZebraPuma.Tools.dll\ZebraPuma.Tools.dll\ZebraPuma.Tools.csproj", "{EABCDEFF-0827-4D09-8440-5245AC51ACDE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -22,6 +24,10 @@ Global
 		{9C133FCB-F856-4FA6-9EE8-08445B37682C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9C133FCB-F856-4FA6-9EE8-08445B37682C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9C133FCB-F856-4FA6-9EE8-08445B37682C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EABCDEFF-0827-4D09-8440-5245AC51ACDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EABCDEFF-0827-4D09-8440-5245AC51ACDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EABCDEFF-0827-4D09-8440-5245AC51ACDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EABCDEFF-0827-4D09-8440-5245AC51ACDE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
