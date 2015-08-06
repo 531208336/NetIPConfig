@@ -56,7 +56,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
@@ -78,13 +77,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\MacOSX.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Windows.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Linux.png" />
+    <ProjectReference Include="..\ZebraPuma.Tools.dll\ZebraPuma.Tools.csproj">
+      <Project>{eabcdeff-0827-4d09-8440-5245ac51acde}</Project>
+      <Name>ZebraPuma.Tools</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

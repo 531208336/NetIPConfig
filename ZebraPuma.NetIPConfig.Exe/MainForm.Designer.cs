@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.txtInfo = new System.Windows.Forms.TextBox();
             this.lblIP = new System.Windows.Forms.Label();
             this.lblSubNet = new System.Windows.Forms.Label();
@@ -172,7 +171,6 @@
             // 
             // pbWindows
             // 
-            this.pbWindows.Image = ((System.Drawing.Image)(resources.GetObject("pbWindows.Image")));
             this.pbWindows.Location = new System.Drawing.Point(414, 18);
             this.pbWindows.Name = "pbWindows";
             this.pbWindows.Size = new System.Drawing.Size(85, 85);
@@ -181,7 +179,6 @@
             // 
             // pbLinux
             // 
-            this.pbLinux.Image = ((System.Drawing.Image)(resources.GetObject("pbLinux.Image")));
             this.pbLinux.Location = new System.Drawing.Point(323, 18);
             this.pbLinux.Name = "pbLinux";
             this.pbLinux.Size = new System.Drawing.Size(85, 85);
@@ -191,7 +188,6 @@
             // pbMacOSX
             // 
             this.pbMacOSX.Enabled = false;
-            this.pbMacOSX.Image = ((System.Drawing.Image)(resources.GetObject("pbMacOSX.Image")));
             this.pbMacOSX.Location = new System.Drawing.Point(232, 18);
             this.pbMacOSX.Name = "pbMacOSX";
             this.pbMacOSX.Size = new System.Drawing.Size(85, 85);
