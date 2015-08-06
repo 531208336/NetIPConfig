@@ -14,6 +14,7 @@ using System.Runtime.InteropServices;
 using System.Text.RegularExpressions;
 using System.Globalization;
 using System.Threading;
+using System.Net.NetworkInformation;
 
 
 
@@ -37,6 +38,35 @@ namespace ZebraPuma.NetIPConfig
         }
 
         private void GetIpInfo()
+        {
+            GetIPInfoFromOS();
+            GetIPInfoFromFrameWork();
+        }
+
+        private void GetIPInfoFromFrameWork()
+        {
+            Boolean IsNetworkAvailable = NetworkInterface.GetIsNetworkAvailable();
+            if (IsNetworkAvailable)
+            {
+                var Nic = NetworkInterface.GetAllNetworkInterfaces().FirstOrDefault( i => i.NetworkInterfaceType == NetworkInterfaceType.Ethernet);
+                var IPProp = Nic.GetIPProperties();
+                var UnicastAddress = IPProp.UnicastAddresses.FirstOrDefault( ua => ua.Address.AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork);
+                var Ip = UnicastAddress.Address.ToString();
+                var Sub = UnicastAddress.IPv4Mask.ToString();
+                var Gw = IPProp.GatewayAddresses.FirstOrDefault().Address.ToString();
+
+
+
+
+
+
+                Debugger.Break();
+            }
+
+
+        }
+
+        private void GetIPInfoFromOS()
         {
             // Get Ip Info from OS Command
 
@@ -83,7 +113,6 @@ namespace ZebraPuma.NetIPConfig
             if (M.Success)
             {
                 IPInfo Ip = new IPInfo(M.Groups["ip"].Value, M.Groups["net"].Value, M.Groups["gw"].Value);
-                // IPInfo Ip = new IPInfo(M.Groups["ip"].Value,  "0xffffff00", M.Groups["gw"].Value );
                 mtxtIPAddress.Text = Ip.IPAddress;
                 mtxtSubNet.Text = Ip.SubNet;
                 mtxtGateway.Text = Ip.Gateway;
@@ -93,9 +122,9 @@ namespace ZebraPuma.NetIPConfig
         private void GetPlatform()
         {
 
-                String HostName = Dns.GetHostName();
-                HostName = HostName.Split('.')[0].ToUpper();
-                Text = string.Format("Net IP Config : {0}", HostName);
+            String HostName = Dns.GetHostName();
+            HostName = HostName.Split('.')[0].ToUpper();
+            Text = string.Format("Net IP Config : {0}", HostName);
 
 
             switch (Environment.OSVersion.Platform)
@@ -196,14 +225,14 @@ namespace ZebraPuma.NetIPConfig
 
             if (CurrentPlatform != PlatformImage)
             {
-                Bitmap bmp = new Bitmap(img.Width, img.Height); // Determining Width and Height of Source Image
+                Bitmap bmp = new Bitmap(img.Width, img.Height);
                 Graphics graphics = Graphics.FromImage(bmp);
                 ColorMatrix colormatrix = new ColorMatrix();
                 colormatrix.Matrix33 = .08F;
                 ImageAttributes imgAttribute = new ImageAttributes();
                 imgAttribute.SetColorMatrix(colormatrix, ColorMatrixFlag.Default, ColorAdjustType.Bitmap);
                 graphics.DrawImage(img, new Rectangle(0, 0, bmp.Width, bmp.Height), 0, 0, img.Width, img.Height, GraphicsUnit.Pixel, imgAttribute);
-                graphics.Dispose();   // Releasing all resource used by graphics
+                graphics.Dispose();
                 img = bmp;
             }
             else
