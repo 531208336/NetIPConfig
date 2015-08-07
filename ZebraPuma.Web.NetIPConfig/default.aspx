@@ -1,16 +1,10 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="default.aspx.cs" Inherits="ZebraPuma.Web.NetIPConfig._default" %>
+﻿<%@ page title="" language="C#" masterpagefile="~/Site.Master" autoeventwireup="true" codebehind="default.aspx.cs" inherits="ZebraPuma.Web.NetIPConfig._default" %>
 
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-    <div>
-    
+<asp:content id="BodyContent" contentplaceholderid="MainContent" runat="server">
+    <div class="row">
+        <asp:TextBox runat="server" CssClass="form-control"></asp:TextBox>
+        <asp:TextBox runat="server" CssClass="form-control"></asp:TextBox>
+        <asp:TextBox runat="server" CssClass="form-control"></asp:TextBox>
+        <asp:TextBox runat="server" CssClass="form-control"></asp:TextBox>
     </div>
-    </form>
-</body>
-</html>
+</asp:content>
