@@ -31,11 +31,11 @@ namespace ZebraPuma.Web.Test
             var switchViewRoute = RouteTable.Routes[switchViewRouteName];
             if (switchViewRoute == null)
             {
-                // Friendly URLs is not enabled or the name of the switch view route is out of sync
+                // Friendly URLs is not enabled or the name of the swith view route is out of sync
                 this.Visible = false;
                 return;
             }
-            var url = GetRouteUrl(switchViewRouteName, new { view = AlternateView, __FriendlyUrls_SwitchViews = true });
+            var url = GetRouteUrl(switchViewRouteName, new { view = AlternateView });
             url += "?ReturnUrl=" + HttpUtility.UrlEncode(Request.RawUrl);
             SwitchUrl = url;
         }

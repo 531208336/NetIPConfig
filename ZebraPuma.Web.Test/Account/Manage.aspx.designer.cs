@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ZebraPuma.Web.Test.Account {
-    
-    
-    public partial class Manage {
-        
+namespace ZebraPuma.Web.Test.Account
+{
+
+
+    public partial class Manage
+    {
+
         /// <summary>
         /// successMessage control.
         /// </summary>
@@ -20,32 +22,45 @@ namespace ZebraPuma.Web.Test.Account {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.PlaceHolder successMessage;
-        
+
         /// <summary>
-        /// ChangePassword control.
+        /// setPassword control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink ChangePassword;
-        
+        protected global::System.Web.UI.WebControls.PlaceHolder setPassword;
+
         /// <summary>
-        /// CreatePassword control.
+        /// password control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink CreatePassword;
-        
+        protected global::System.Web.UI.WebControls.TextBox password;
+
+
+
         /// <summary>
-        /// PhoneNumber control.
+        /// confirmPassword control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label PhoneNumber;
+        protected global::System.Web.UI.WebControls.TextBox confirmPassword;
+
+        /// <summary>
+        /// changePassword control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.PlaceHolder changePassword;
+
+
     }
 }

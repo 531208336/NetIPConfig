@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ZebraPuma.Web.Test.Account {
-    
-    
-    public partial class OpenAuthProviders {
-        
+namespace ZebraPuma.Web.Test.Account
+{
+
+
+    public partial class OpenAuthProviders
+    {
+
         /// <summary>
         /// providerDetails control.
         /// </summary>
@@ -20,5 +22,6 @@ namespace ZebraPuma.Web.Test.Account {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ListView providerDetails;
+
     }
 }
