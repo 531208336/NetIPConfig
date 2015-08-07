@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ZebraPuma.NetIPConfig.Properties {
+namespace ZebraPuma.Forms.NetIPConfig.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]

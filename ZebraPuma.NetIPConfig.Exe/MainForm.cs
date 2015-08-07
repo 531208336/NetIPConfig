@@ -12,7 +12,7 @@ using System.Threading;
 using System.Net;
 using ZebraPuma.Tools;
 
-namespace ZebraPuma.NetIPConfig
+namespace ZebraPuma.Forms.NetIPConfig
 {
     public partial class MainForm : Form
     {

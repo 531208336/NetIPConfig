@@ -1,4 +1,4 @@
-﻿namespace ZebraPuma.NetIPConfig
+﻿namespace ZebraPuma.Forms.NetIPConfig
 {
     partial class MainForm
     {
