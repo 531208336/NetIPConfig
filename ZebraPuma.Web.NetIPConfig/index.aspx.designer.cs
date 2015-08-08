@@ -10,6 +10,6 @@
 namespace ZebraPuma.Web.NetIPConfig {
     
     
-    public partial class _default {
+    public partial class index {
     }
 }

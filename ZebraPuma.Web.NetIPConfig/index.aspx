@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="default.aspx.cs" Inherits="ZebraPuma.Web.NetIPConfig._default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="ZebraPuma.Web.NetIPConfig.index" %>
 
 <head>
     <title>Net IP Config</title>
