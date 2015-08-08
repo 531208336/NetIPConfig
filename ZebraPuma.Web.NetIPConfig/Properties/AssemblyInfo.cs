@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("ZebraPuma.Web.NetIPConfig")]
+[assembly: AssemblyTitle("TestBootStrap")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ZebraPuma.Web.NetIPConfig")]
+[assembly: AssemblyProduct("TestBootStrap")]
 [assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("05a65941-d199-4053-b9af-7c1eac3ffbdc")]
+[assembly: Guid("d0ef8df1-4975-4aa0-b5ef-ccfd703c3ef9")]
 
 // Version information for an assembly consists of the following four values:
 //
