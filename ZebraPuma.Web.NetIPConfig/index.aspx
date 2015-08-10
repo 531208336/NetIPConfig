@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="ZebraPuma.Web.NetIPConfig.index" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="ZebraPuma.Web.NetIPConfig.index" validateRequest="false"%>
 
 <head>
     <title>Net IP Config</title>
@@ -81,7 +81,7 @@
             </div>
             <div class="panel panel-default">
                 <div class="panel-heading">IP Info</div>
-                <textarea class="form-control panel-body" style="font-family:monospace; font-size:12px" rows="25" id="ip_info" runat="server"></textarea>
+                <textarea class="form-control panel-body" style="font-family:monospace; font-size:10px; background-color:white;" rows="15" id="ip_info" runat="server" readonly="readonly"></textarea>
             </div>
         </form>
     </div>

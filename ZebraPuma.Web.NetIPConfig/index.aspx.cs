@@ -13,6 +13,7 @@ namespace ZebraPuma.Web.NetIPConfig
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            Page.EnableViewState = false;
             GetPlatform();
             GetIpInfo();
 
@@ -23,25 +24,27 @@ namespace ZebraPuma.Web.NetIPConfig
         {
             IPInfo IP = IPInfo.GetIPInfo();
             
-            byte[] Octets = IP.IPAddress.GetAddressBytes();
-            ip_a.Value = Octets[0].ToString();
-            ip_b.Value = Octets[1].ToString();
-            ip_c.Value = Octets[2].ToString();
-            ip_d.Value = Octets[3].ToString();
+            byte[] Bytes = IP.IPAddress.GetAddressBytes();
+            ip_a.Value = Bytes[0].ToString();
+            ip_b.Value = Bytes[1].ToString();
+            ip_c.Value = Bytes[2].ToString();
+            ip_d.Value = Bytes[3].ToString();
 
-            Octets = IP.SubNet.GetAddressBytes();
-            net_a.Value = Octets[0].ToString();
-            net_b.Value = Octets[1].ToString();
-            net_c.Value = Octets[2].ToString();
-            net_d.Value = Octets[3].ToString();
+            Bytes = IP.SubNet.GetAddressBytes();
+            net_a.Value = Bytes[0].ToString();
+            net_b.Value = Bytes[1].ToString();
+            net_c.Value = Bytes[2].ToString();
+            net_d.Value = Bytes[3].ToString();
 
-            Octets = IP.Gateway.GetAddressBytes();
-            gw_a.Value = Octets[0].ToString();
-            gw_b.Value = Octets[1].ToString();
-            gw_c.Value = Octets[2].ToString();
-            gw_d.Value = Octets[3].ToString();
+            Bytes = IP.Gateway.GetAddressBytes();
+            gw_a.Value = Bytes[0].ToString();
+            gw_b.Value = Bytes[1].ToString();
+            gw_c.Value = Bytes[2].ToString();
+            gw_d.Value = Bytes[3].ToString();
 
-            ip_info.Value = Server.HtmlEncode(IP.Shell.Result);
+            //ip_info.Value = IP.Shell.Result;
+
+            ip_info.InnerText = IP.Shell.Result;
 
         }
 
@@ -50,6 +53,8 @@ namespace ZebraPuma.Web.NetIPConfig
         {
 
             NetIPConfigTitle.Text = string.Format("Net IP Config : {0}", OS.HostName);
+
+            // data:image/jpeg;base64
 
             //pbMacOSX.Image = OS.Image(OSType.MacOSX);
             //pbLinux.Image = OS.Image(OSType.Linux);
