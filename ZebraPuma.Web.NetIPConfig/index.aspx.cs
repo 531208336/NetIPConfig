@@ -41,7 +41,7 @@ namespace ZebraPuma.Web.NetIPConfig
             gw_c.Value = Octets[2].ToString();
             gw_d.Value = Octets[3].ToString();
 
-            ip_info.Value = IP.Shell.Result;
+            ip_info.Value = Server.HtmlEncode(IP.Shell.Result);
 
         }
 

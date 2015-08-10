@@ -81,7 +81,7 @@
             </div>
             <div class="panel panel-default">
                 <div class="panel-heading">IP Info</div>
-                <textarea class="form-control panel-body" style="font-family:'Lucida Console'" rows="25" id="ip_info" runat="server"></textarea>
+                <textarea class="form-control panel-body" style="font-family:monospace; font-size:12px" rows="25" id="ip_info" runat="server"></textarea>
             </div>
         </form>
     </div>
