@@ -18,9 +18,9 @@ namespace ZebraPuma.Tools
 
         private IPInfo(String IPAddress, String SubNet, String Gateway)
         {
-            this.IPAddress = System.Net.IPAddress.Parse(FormatIPAddress(IPAddress));
-            this.SubNet = System.Net.IPAddress.Parse(FormatIPAddress(SubNet));
-            this.Gateway = System.Net.IPAddress.Parse(FormatIPAddress(Gateway));
+            this.IPAddress = System.Net.IPAddress.Parse(FormatIPAddress(IPAddress.Trim()));
+            this.SubNet = System.Net.IPAddress.Parse(FormatIPAddress(SubNet.Trim()));
+            this.Gateway = System.Net.IPAddress.Parse(FormatIPAddress(Gateway.Trim()));
         }
 
         

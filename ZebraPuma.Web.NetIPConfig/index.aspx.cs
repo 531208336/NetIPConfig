@@ -49,7 +49,7 @@ namespace ZebraPuma.Web.NetIPConfig
         private void GetPlatform()
         {
 
-            Title.Text = string.Format("Net IP Config : {0}", OS.HostName);
+            NetIPConfigTitle.Text = string.Format("Net IP Config : {0}", OS.HostName);
 
             //pbMacOSX.Image = OS.Image(OSType.MacOSX);
             //pbLinux.Image = OS.Image(OSType.Linux);

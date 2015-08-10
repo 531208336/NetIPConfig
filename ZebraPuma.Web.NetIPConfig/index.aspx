@@ -15,7 +15,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading"style="text-align:center">
                     <h1>
-                        <asp:label runat="server" text="Label" id="Title"></asp:label>
+                        <asp:label runat="server" text="Label" id="NetIPConfigTitle"></asp:label>
                     </h1>
                 </div>
             </div>
