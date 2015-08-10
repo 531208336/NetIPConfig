@@ -27,9 +27,9 @@ namespace ZebraPuma.Forms.NetIPConfig
         private void GetIpInfo()
         {
             IPInfo IP = IPInfo.GetIPInfo();
-            mtxtIPAddress.Text = IP.IPAddress;
-            mtxtSubNet.Text = IP.SubNet;
-            mtxtGateway.Text = IP.Gateway;
+            txtIP.Text = IP.IPAddress.ToString();
+            txtNet.Text = IP.SubNet.ToString();
+            txtGw.Text = IP.Gateway.ToString();
             txtInfo.Text = IP.Shell.Result ;
         }
 

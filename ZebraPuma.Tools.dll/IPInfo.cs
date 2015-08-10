@@ -18,16 +18,17 @@ namespace ZebraPuma.Tools
 
         private IPInfo(String IPAddress, String SubNet, String Gateway)
         {
-            this.IPAddress = FormatIPAddress(IPAddress);
-            this.SubNet = FormatIPAddress(SubNet);
-            this.Gateway = FormatIPAddress(Gateway);
+            this.IPAddress = System.Net.IPAddress.Parse(FormatIPAddress(IPAddress));
+            this.SubNet = System.Net.IPAddress.Parse(FormatIPAddress(SubNet));
+            this.Gateway = System.Net.IPAddress.Parse(FormatIPAddress(Gateway));
         }
 
+        
         public IPsource Source { get; set; }
 
-        public String IPAddress { get; set; }
-        public String SubNet { get; set; }
-        public String Gateway { get; set; }
+        public IPAddress IPAddress { get; set; }
+        public IPAddress SubNet { get; set; }
+        public IPAddress Gateway { get; set; }
 
         public Shell Shell { get; set; }
         
@@ -38,9 +39,7 @@ namespace ZebraPuma.Tools
                 Address = Address.TrimStart("0x".ToCharArray());
                 Address = String.Join(".", Split(Address, 2).Select(item => int.Parse(item, System.Globalization.NumberStyles.HexNumber)).ToArray());
             }
-            var blocks = Address.Split('.');
-            blocks = blocks.Select(item => item.Trim().PadLeft(3, ' ')).ToArray();
-            return String.Join(".", blocks).ToString();
+            return Address;
         }
 
         static IEnumerable<string> Split(string str, int chunkSize)

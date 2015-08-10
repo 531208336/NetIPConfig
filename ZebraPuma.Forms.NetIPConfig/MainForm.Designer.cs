@@ -32,15 +32,15 @@
             this.lblIP = new System.Windows.Forms.Label();
             this.lblSubNet = new System.Windows.Forms.Label();
             this.lblGateway = new System.Windows.Forms.Label();
-            this.mtxtIPAddress = new System.Windows.Forms.MaskedTextBox();
-            this.mtxtSubNet = new System.Windows.Forms.MaskedTextBox();
-            this.mtxtGateway = new System.Windows.Forms.MaskedTextBox();
             this.gIPInfo = new System.Windows.Forms.GroupBox();
             this.btRefresh = new System.Windows.Forms.Button();
             this.pbWindows = new System.Windows.Forms.PictureBox();
             this.pbLinux = new System.Windows.Forms.PictureBox();
             this.pbMacOSX = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtIP = new System.Windows.Forms.TextBox();
+            this.txtNet = new System.Windows.Forms.TextBox();
+            this.txtGw = new System.Windows.Forms.TextBox();
             this.gIPInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbWindows)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLinux)).BeginInit();
@@ -96,62 +96,20 @@
             this.lblGateway.Text = "Default Gateway :";
             this.lblGateway.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // mtxtIPAddress
-            // 
-            this.mtxtIPAddress.BackColor = System.Drawing.Color.White;
-            this.mtxtIPAddress.Culture = new System.Globalization.CultureInfo("en-US");
-            this.mtxtIPAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.mtxtIPAddress.Location = new System.Drawing.Point(104, 19);
-            this.mtxtIPAddress.Mask = "##0.##0.##0.##0";
-            this.mtxtIPAddress.Name = "mtxtIPAddress";
-            this.mtxtIPAddress.PromptChar = ' ';
-            this.mtxtIPAddress.ReadOnly = true;
-            this.mtxtIPAddress.Size = new System.Drawing.Size(119, 20);
-            this.mtxtIPAddress.TabIndex = 1;
-            this.mtxtIPAddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // mtxtSubNet
-            // 
-            this.mtxtSubNet.BackColor = System.Drawing.Color.White;
-            this.mtxtSubNet.Culture = new System.Globalization.CultureInfo("en-US");
-            this.mtxtSubNet.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.mtxtSubNet.Location = new System.Drawing.Point(104, 50);
-            this.mtxtSubNet.Mask = "##0.##0.##0.##0";
-            this.mtxtSubNet.Name = "mtxtSubNet";
-            this.mtxtSubNet.PromptChar = ' ';
-            this.mtxtSubNet.ReadOnly = true;
-            this.mtxtSubNet.Size = new System.Drawing.Size(119, 20);
-            this.mtxtSubNet.TabIndex = 3;
-            this.mtxtSubNet.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // mtxtGateway
-            // 
-            this.mtxtGateway.BackColor = System.Drawing.Color.White;
-            this.mtxtGateway.Culture = new System.Globalization.CultureInfo("en-US");
-            this.mtxtGateway.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.mtxtGateway.Location = new System.Drawing.Point(104, 81);
-            this.mtxtGateway.Mask = "##0.##0.##0.##0";
-            this.mtxtGateway.Name = "mtxtGateway";
-            this.mtxtGateway.PromptChar = ' ';
-            this.mtxtGateway.ReadOnly = true;
-            this.mtxtGateway.Size = new System.Drawing.Size(119, 20);
-            this.mtxtGateway.TabIndex = 5;
-            this.mtxtGateway.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // gIPInfo
             // 
             this.gIPInfo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.gIPInfo.Controls.Add(this.txtGw);
+            this.gIPInfo.Controls.Add(this.txtNet);
+            this.gIPInfo.Controls.Add(this.txtIP);
             this.gIPInfo.Controls.Add(this.btRefresh);
             this.gIPInfo.Controls.Add(this.pbWindows);
             this.gIPInfo.Controls.Add(this.pbLinux);
             this.gIPInfo.Controls.Add(this.pbMacOSX);
             this.gIPInfo.Controls.Add(this.lblSubNet);
-            this.gIPInfo.Controls.Add(this.mtxtGateway);
             this.gIPInfo.Controls.Add(this.lblIP);
-            this.gIPInfo.Controls.Add(this.mtxtSubNet);
             this.gIPInfo.Controls.Add(this.lblGateway);
-            this.gIPInfo.Controls.Add(this.mtxtIPAddress);
             this.gIPInfo.Location = new System.Drawing.Point(13, 12);
             this.gIPInfo.Name = "gIPInfo";
             this.gIPInfo.Size = new System.Drawing.Size(599, 111);
@@ -207,6 +165,33 @@
             this.panel1.Size = new System.Drawing.Size(599, 354);
             this.panel1.TabIndex = 0;
             // 
+            // txtIP
+            // 
+            this.txtIP.BackColor = System.Drawing.Color.White;
+            this.txtIP.Location = new System.Drawing.Point(107, 20);
+            this.txtIP.Name = "txtIP";
+            this.txtIP.ReadOnly = true;
+            this.txtIP.Size = new System.Drawing.Size(108, 20);
+            this.txtIP.TabIndex = 11;
+            // 
+            // txtNet
+            // 
+            this.txtNet.BackColor = System.Drawing.Color.White;
+            this.txtNet.Location = new System.Drawing.Point(108, 51);
+            this.txtNet.Name = "txtNet";
+            this.txtNet.ReadOnly = true;
+            this.txtNet.Size = new System.Drawing.Size(108, 20);
+            this.txtNet.TabIndex = 12;
+            // 
+            // txtGw
+            // 
+            this.txtGw.BackColor = System.Drawing.Color.White;
+            this.txtGw.Location = new System.Drawing.Point(107, 80);
+            this.txtGw.Name = "txtGw";
+            this.txtGw.ReadOnly = true;
+            this.txtGw.Size = new System.Drawing.Size(108, 20);
+            this.txtGw.TabIndex = 13;
+            // 
             // MainForm
             // 
             this.AcceptButton = this.btRefresh;
@@ -235,15 +220,15 @@
         private System.Windows.Forms.Label lblIP;
         private System.Windows.Forms.Label lblSubNet;
         private System.Windows.Forms.Label lblGateway;
-        private System.Windows.Forms.MaskedTextBox mtxtIPAddress;
-        private System.Windows.Forms.MaskedTextBox mtxtSubNet;
-        private System.Windows.Forms.MaskedTextBox mtxtGateway;
         private System.Windows.Forms.GroupBox gIPInfo;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pbWindows;
         private System.Windows.Forms.PictureBox pbLinux;
         private System.Windows.Forms.PictureBox pbMacOSX;
         private System.Windows.Forms.Button btRefresh;
+        private System.Windows.Forms.TextBox txtGw;
+        private System.Windows.Forms.TextBox txtNet;
+        private System.Windows.Forms.TextBox txtIP;
     }
 }
 
