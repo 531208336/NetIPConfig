@@ -97,15 +97,7 @@ namespace ZebraPuma.Tools
 
             if (OS.Type != OSImage)
             {
-                Bitmap bmp = new Bitmap(img.Width, img.Height);
-                Graphics graphics = Graphics.FromImage(bmp);
-                ColorMatrix colormatrix = new ColorMatrix();
-                colormatrix.Matrix33 = .08F;
-                ImageAttributes imgAttribute = new ImageAttributes();
-                imgAttribute.SetColorMatrix(colormatrix, ColorMatrixFlag.Default, ColorAdjustType.Bitmap);
-                graphics.DrawImage(img, new Rectangle(0, 0, bmp.Width, bmp.Height), 0, 0, img.Width, img.Height, GraphicsUnit.Pixel, imgAttribute);
-                graphics.Dispose();
-                img = bmp;
+                img = img.GetOpacityImage();
             }
 
             return img;
@@ -119,10 +111,7 @@ namespace ZebraPuma.Tools
 
         public static Icon Icon(OSType OSImage)
         {
-            
-            Bitmap BitmapIcon = new Bitmap( Image( OSImage) , new Size(32, 32));
-            IntPtr hIcon = BitmapIcon.GetHicon();
-            return System.Drawing.Icon.FromHandle(hIcon);
+            return Image(OSImage).GetIcon();
         }
 
     }

@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ImageHelper.cs" />
     <Compile Include="IPInfo.cs" />
     <Compile Include="OS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

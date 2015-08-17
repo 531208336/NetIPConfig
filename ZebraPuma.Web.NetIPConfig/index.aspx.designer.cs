@@ -22,6 +22,33 @@ namespace ZebraPuma.Web.NetIPConfig {
         protected global::System.Web.UI.WebControls.Label NetIPConfigTitle;
         
         /// <summary>
+        /// imgMacOSX control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlImage imgMacOSX;
+        
+        /// <summary>
+        /// imgLinux control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlImage imgLinux;
+        
+        /// <summary>
+        /// imgWindows control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlImage imgWindows;
+        
+        /// <summary>
         /// ip_a control.
         /// </summary>
         /// <remarks>

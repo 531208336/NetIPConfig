@@ -54,15 +54,13 @@ namespace ZebraPuma.Web.NetIPConfig
 
             NetIPConfigTitle.Text = string.Format("Net IP Config : {0}", OS.HostName);
 
-            // data:image/jpeg;base64
-
-            //pbMacOSX.Image = OS.Image(OSType.MacOSX);
-            //pbLinux.Image = OS.Image(OSType.Linux);
-            //pbWindows.Image = OS.Image(OSType.Windows);
-
-            //this.Icon = OS.Icon();
+            imgMacOSX.Src = OS.Image(OSType.MacOSX).ToSrcData();
+            imgLinux.Src = OS.Image(OSType.Linux).ToSrcData();
+            imgWindows.Src = OS.Image(OSType.Windows).ToSrcData();
 
         }
+
+
 
         protected void btSubmit_Click(object sender, EventArgs e)
         {

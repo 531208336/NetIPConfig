@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="ZebraPuma.Web.NetIPConfig.index" validateRequest="false"%>
+﻿<%@ page language="C#" autoeventwireup="true" codebehind="index.aspx.cs" inherits="ZebraPuma.Web.NetIPConfig.index" validaterequest="false" %>
 
 <head>
     <title>Net IP Config</title>
@@ -13,7 +13,7 @@
     <div class="container">
         <form class="form-horizontal col-md-6 col-md-offset-3" runat="server">
             <div class="panel panel-default">
-                <div class="panel-heading"style="text-align:center">
+                <div class="panel-heading" style="text-align: center">
                     <h1>
                         <asp:label runat="server" text="Label" id="NetIPConfigTitle"></asp:label>
                     </h1>
@@ -24,13 +24,13 @@
                 <div class="panel-body">
                     <div class="form-group">
                         <div class="col-md-4 col-xs-4">
-                            <img src="images/MacOSX.png" class="img-responsive center-block" />
+                            <img class="img-responsive center-block" runat="server" id="imgMacOSX" />
                         </div>
                         <div class="col-md-4 col-xs-4">
-                            <img src="images/Linux.png" class="img-responsive center-block" />
+                            <img class="img-responsive center-block" runat="server" id="imgLinux" />
                         </div>
                         <div class="col-md-4 col-xs-4">
-                            <img src="images/Windows.png" class="img-responsive center-block" />
+                            <img class="img-responsive center-block" runat="server" id="imgWindows" />
                         </div>
                     </div>
                 </div>
@@ -75,13 +75,13 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <asp:button runat="server" text="Refresh IP" CssClass="btn btn-default col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1" ID="btSubmit" OnClick="btSubmit_Click" />
+                        <asp:button runat="server" text="Refresh IP" cssclass="btn btn-default col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1" id="btSubmit" onclick="btSubmit_Click" />
                     </div>
                 </div>
             </div>
             <div class="panel panel-default">
                 <div class="panel-heading">IP Info</div>
-                <textarea class="form-control panel-body" style="font-family:monospace; font-size:10px; background-color:white;" rows="15" id="ip_info" runat="server" readonly="readonly"></textarea>
+                <textarea class="form-control panel-body" style="font-family: monospace; font-size: 10px; background-color: white;" rows="15" id="ip_info" runat="server" readonly="readonly"></textarea>
             </div>
         </form>
     </div>
