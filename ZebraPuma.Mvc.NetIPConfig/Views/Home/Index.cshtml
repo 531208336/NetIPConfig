@@ -1,0 +1,79 @@
+﻿@{
+    ViewBag.Title = "NetIPConfig";
+}
+
+<div class="container">
+    <form class="form-horizontal col-md-6 col-md-offset-3" >
+        <div class="panel panel-default">
+            <div class="panel-heading" style="text-align: center">
+                <h1>
+                    <label text="Label" id="NetIPConfigTitle"></label>
+                </h1>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">Operating System</div>
+            <div class="panel-body">
+                <div class="form-group">
+                    <div class="col-md-4 col-xs-4">
+                        <img class="img-responsive center-block"  id="imgMacOSX" />
+                    </div>
+                    <div class="col-md-4 col-xs-4">
+                        <img class="img-responsive center-block"  id="imgLinux" />
+                    </div>
+                    <div class="col-md-4 col-xs-4">
+                        <img class="img-responsive center-block"  id="imgWindows" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">Configuration IP</div>
+            <div class="panel-body">
+                <div class="form-group">
+                    <label for="ip_a" class="control-label col-md-2 col-md-offset-1 col-xs-2 col-xs-offset-1">IP :</label>
+                    <div class="input-group col-md-8 col-xs-8">
+                        <input type="text" class="form-control" id="ip_a" >
+                        <div class="input-group-addon">.</div>
+                        <input type="text" class="form-control" id="ip_b" >
+                        <div class="input-group-addon">.</div>
+                        <input type="text" class="form-control" id="ip_c" >
+                        <div class="input-group-addon">.</div>
+                        <input type="text" class="form-control" id="ip_d" >
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="net_a" class="control-label col-md-2 col-md-offset-1 col-xs-2 col-xs-offset-1">Net :</label>
+                    <div class="input-group col-md-8 col-xs-8">
+                        <input type="text" class="form-control" id="net_a" >
+                        <div class="input-group-addon">.</div>
+                        <input type="text" class="form-control" id="net_b" >
+                        <div class="input-group-addon">.</div>
+                        <input type="text" class="form-control" id="net_c" >
+                        <div class="input-group-addon">.</div>
+                        <input type="text" class="form-control" id="net_d" >
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="gw_a" class="control-label col-md-2 col-md-offset-1 col-xs-2 col-xs-offset-1">Gw :</label>
+                    <div class="input-group col-md-8 col-xs-8">
+                        <input type="text" class="form-control" id="gw_a" >
+                        <div class="input-group-addon">.</div>
+                        <input type="text" class="form-control" id="gw_b" >
+                        <div class="input-group-addon">.</div>
+                        <input type="text" class="form-control" id="gw_c" >
+                        <div class="input-group-addon">.</div>
+                        <input type="text" class="form-control" id="gw_d" >
+                    </div>
+                </div>
+                <div class="form-group">
+                    <asp:button  text="Refresh IP" cssclass="btn btn-default col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1" id="btSubmit" onclick="btSubmit_Click" />
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">IP Info</div>
+            <textarea class="form-control panel-body" style="font-family: monospace; font-size: 10px; background-color: white;" rows="15" id="ip_info"  readonly="readonly"></textarea>
+        </div>
+    </form>
+</div>
